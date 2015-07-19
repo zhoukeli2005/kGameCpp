@@ -7,6 +7,7 @@
 //
 
 #import "kGLKViewController.h"
+#import "kGame.h"
 
 @implementation kGLKViewController
 
