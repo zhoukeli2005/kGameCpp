@@ -75,5 +75,7 @@
 	viewController.preferredFramesPerSecond = 60;
 
 	NSLog(@"AppDelegate:initGLView");
+	
+	[viewController start];
 }
 @end

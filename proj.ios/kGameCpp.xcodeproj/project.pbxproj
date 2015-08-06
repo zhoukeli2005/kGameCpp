@@ -7,14 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE2E16AC1B5D4559004D1C16 /* kEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2E16AA1B5D4559004D1C16 /* kEngine.cpp */; };
+		CE2E16B51B5D5570004D1C16 /* kFile.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE2E16B41B5D5570004D1C16 /* kFile.mm */; };
+		CE2E16BE1B5D5F51004D1C16 /* shader in Resources */ = {isa = PBXBuildFile; fileRef = CE2E16BD1B5D5F51004D1C16 /* shader */; };
+		CE38ED1A1B613C28007896BD /* kLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE38ED191B613C28007896BD /* kLog.cpp */; };
+		CE38ED1E1B6146D0007896BD /* kNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE38ED1C1B6146D0007896BD /* kNode.cpp */; };
+		CE38ED221B61492A007896BD /* kVec3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE38ED201B61492A007896BD /* kVec3.cpp */; };
+		CE574A561B635973008A80C6 /* kMathUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE574A551B635973008A80C6 /* kMathUtil.cpp */; };
+		CE574A591B6361CF008A80C6 /* kNodeBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE574A581B6361CF008A80C6 /* kNodeBox.cpp */; };
+		CE574A5E1B636754008A80C6 /* FirstGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE574A5C1B636754008A80C6 /* FirstGame.cpp */; };
+		CE574A6F1B64D091008A80C6 /* kShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE574A6D1B64D091008A80C6 /* kShader.cpp */; };
+		CE78494C1B7339BE009094F3 /* kProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE78494A1B7339BE009094F3 /* kProgram.cpp */; };
+		CE78494F1B735D64009094F3 /* kOpenGLCapability.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE78494D1B735D64009094F3 /* kOpenGLCapability.cpp */; };
+		CE7849591B73A970009094F3 /* kRender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE7849571B73A970009094F3 /* kRender.cpp */; };
 		CE7E5AC21B5B871000C534CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7E5AC11B5B871000C534CA /* main.m */; };
 		CE7E5AC51B5B871000C534CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7E5AC41B5B871000C534CA /* AppDelegate.m */; };
 		CE7E5ACD1B5B871000C534CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7E5ACC1B5B871000C534CA /* Images.xcassets */; };
 		CE7E5AD01B5B871000C534CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE7E5ACE1B5B871000C534CA /* LaunchScreen.xib */; };
 		CE7E5ADC1B5B871000C534CA /* kGameCppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7E5ADB1B5B871000C534CA /* kGameCppTests.m */; };
-		CE7E5AEC1B5B8A8200C534CA /* kGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE7E5AEA1B5B8A8200C534CA /* kGame.cpp */; };
-		CE7E5AEF1B5B8ABB00C534CA /* kGLKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7E5AEE1B5B8ABB00C534CA /* kGLKViewController.m */; };
+		CE7E5AEF1B5B8ABB00C534CA /* kGLKViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE7E5AEE1B5B8ABB00C534CA /* kGLKViewController.mm */; };
 		CE7E5AF11B5B8AE800C534CA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7E5AF01B5B8AE800C534CA /* OpenGLES.framework */; };
+		CE7E5AF51B5B8C5100C534CA /* kObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE7E5AF31B5B8C5100C534CA /* kObject.cpp */; };
+		CE9D5B011B61D460001F8620 /* kMatrix4x4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE9D5AFF1B61D460001F8620 /* kMatrix4x4.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +42,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE2E16AA1B5D4559004D1C16 /* kEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kEngine.cpp; sourceTree = "<group>"; };
+		CE2E16AB1B5D4559004D1C16 /* kEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kEngine.h; sourceTree = "<group>"; };
+		CE2E16AD1B5D4BDB004D1C16 /* kConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = kConfig.h; path = core/kConfig.h; sourceTree = "<group>"; };
+		CE2E16AF1B5D5279004D1C16 /* kFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kFile.h; path = io/kFile.h; sourceTree = "<group>"; };
+		CE2E16B41B5D5570004D1C16 /* kFile.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = kFile.mm; path = platform/ios/kFile.mm; sourceTree = "<group>"; };
+		CE2E16BD1B5D5F51004D1C16 /* shader */ = {isa = PBXFileReference; lastKnownFileType = folder; name = shader; path = ../src/kEngine/shader; sourceTree = "<group>"; };
+		CE38ED181B6138AF007896BD /* kLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kLog.h; sourceTree = "<group>"; };
+		CE38ED191B613C28007896BD /* kLog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kLog.cpp; sourceTree = "<group>"; };
+		CE38ED1C1B6146D0007896BD /* kNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kNode.cpp; sourceTree = "<group>"; };
+		CE38ED1D1B6146D0007896BD /* kNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kNode.h; sourceTree = "<group>"; };
+		CE38ED201B61492A007896BD /* kVec3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kVec3.cpp; sourceTree = "<group>"; };
+		CE38ED211B61492A007896BD /* kVec3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kVec3.h; sourceTree = "<group>"; };
+		CE38ED251B615213007896BD /* kStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kStat.h; sourceTree = "<group>"; };
+		CE574A541B6357E3008A80C6 /* kMathUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kMathUtil.h; sourceTree = "<group>"; };
+		CE574A551B635973008A80C6 /* kMathUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kMathUtil.cpp; sourceTree = "<group>"; };
+		CE574A571B63608D008A80C6 /* kNodeBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kNodeBox.h; sourceTree = "<group>"; };
+		CE574A581B6361CF008A80C6 /* kNodeBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kNodeBox.cpp; sourceTree = "<group>"; };
+		CE574A5C1B636754008A80C6 /* FirstGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FirstGame.cpp; sourceTree = "<group>"; };
+		CE574A5D1B636754008A80C6 /* FirstGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstGame.h; sourceTree = "<group>"; };
+		CE574A6D1B64D091008A80C6 /* kShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kShader.cpp; sourceTree = "<group>"; };
+		CE574A6E1B64D091008A80C6 /* kShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kShader.h; sourceTree = "<group>"; };
+		CE7849451B73366C009094F3 /* kVertexShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kVertexShader.h; sourceTree = "<group>"; };
+		CE7849481B733753009094F3 /* kFragmentShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kFragmentShader.h; sourceTree = "<group>"; };
+		CE78494A1B7339BE009094F3 /* kProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kProgram.cpp; sourceTree = "<group>"; };
+		CE78494B1B7339BE009094F3 /* kProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kProgram.h; sourceTree = "<group>"; };
+		CE78494D1B735D64009094F3 /* kOpenGLCapability.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kOpenGLCapability.cpp; sourceTree = "<group>"; };
+		CE78494E1B735D64009094F3 /* kOpenGLCapability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kOpenGLCapability.h; sourceTree = "<group>"; };
+		CE7849561B73A744009094F3 /* kSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kSize.h; sourceTree = "<group>"; };
+		CE7849571B73A970009094F3 /* kRender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kRender.cpp; sourceTree = "<group>"; };
+		CE7849581B73A970009094F3 /* kRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kRender.h; sourceTree = "<group>"; };
 		CE7E5ABC1B5B871000C534CA /* kGameCpp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kGameCpp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7E5AC01B5B871000C534CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE7E5AC11B5B871000C534CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -38,11 +82,13 @@
 		CE7E5AD51B5B871000C534CA /* kGameCppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kGameCppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7E5ADA1B5B871000C534CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE7E5ADB1B5B871000C534CA /* kGameCppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kGameCppTests.m; sourceTree = "<group>"; };
-		CE7E5AEA1B5B8A8200C534CA /* kGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kGame.cpp; sourceTree = "<group>"; };
-		CE7E5AEB1B5B8A8200C534CA /* kGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kGame.h; sourceTree = "<group>"; };
 		CE7E5AED1B5B8ABB00C534CA /* kGLKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kGLKViewController.h; sourceTree = "<group>"; };
-		CE7E5AEE1B5B8ABB00C534CA /* kGLKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kGLKViewController.m; sourceTree = "<group>"; };
+		CE7E5AEE1B5B8ABB00C534CA /* kGLKViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = kGLKViewController.mm; sourceTree = "<group>"; };
 		CE7E5AF01B5B8AE800C534CA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		CE7E5AF31B5B8C5100C534CA /* kObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = kObject.cpp; path = core/kObject.cpp; sourceTree = "<group>"; };
+		CE7E5AF41B5B8C5100C534CA /* kObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kObject.h; path = core/kObject.h; sourceTree = "<group>"; };
+		CE9D5AFF1B61D460001F8620 /* kMatrix4x4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kMatrix4x4.cpp; sourceTree = "<group>"; };
+		CE9D5B001B61D460001F8620 /* kMatrix4x4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kMatrix4x4.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +110,112 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE2E16A91B5D436E004D1C16 /* io */ = {
+			isa = PBXGroup;
+			children = (
+				CE2E16AF1B5D5279004D1C16 /* kFile.h */,
+			);
+			name = io;
+			sourceTree = "<group>";
+		};
+		CE2E16B11B5D551C004D1C16 /* platform */ = {
+			isa = PBXGroup;
+			children = (
+				CE2E16B21B5D5528004D1C16 /* ios */,
+			);
+			name = platform;
+			sourceTree = "<group>";
+		};
+		CE2E16B21B5D5528004D1C16 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				CE2E16B31B5D5531004D1C16 /* io */,
+			);
+			name = ios;
+			sourceTree = "<group>";
+		};
+		CE2E16B31B5D5531004D1C16 /* io */ = {
+			isa = PBXGroup;
+			children = (
+				CE2E16B41B5D5570004D1C16 /* kFile.mm */,
+			);
+			name = io;
+			sourceTree = "<group>";
+		};
+		CE38ED171B61389B007896BD /* log */ = {
+			isa = PBXGroup;
+			children = (
+				CE38ED181B6138AF007896BD /* kLog.h */,
+				CE38ED191B613C28007896BD /* kLog.cpp */,
+			);
+			path = log;
+			sourceTree = "<group>";
+		};
+		CE38ED1B1B6146BE007896BD /* node */ = {
+			isa = PBXGroup;
+			children = (
+				CE38ED1C1B6146D0007896BD /* kNode.cpp */,
+				CE38ED1D1B6146D0007896BD /* kNode.h */,
+				CE574A571B63608D008A80C6 /* kNodeBox.h */,
+				CE574A581B6361CF008A80C6 /* kNodeBox.cpp */,
+			);
+			path = node;
+			sourceTree = "<group>";
+		};
+		CE38ED1F1B614912007896BD /* math */ = {
+			isa = PBXGroup;
+			children = (
+				CE38ED201B61492A007896BD /* kVec3.cpp */,
+				CE38ED211B61492A007896BD /* kVec3.h */,
+				CE9D5AFF1B61D460001F8620 /* kMatrix4x4.cpp */,
+				CE9D5B001B61D460001F8620 /* kMatrix4x4.h */,
+				CE574A541B6357E3008A80C6 /* kMathUtil.h */,
+				CE574A551B635973008A80C6 /* kMathUtil.cpp */,
+				CE7849561B73A744009094F3 /* kSize.h */,
+			);
+			path = math;
+			sourceTree = "<group>";
+		};
+		CE38ED241B615213007896BD /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				CE38ED251B615213007896BD /* kStat.h */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		CE574A5B1B63673C008A80C6 /* game */ = {
+			isa = PBXGroup;
+			children = (
+				CE574A5C1B636754008A80C6 /* FirstGame.cpp */,
+				CE574A5D1B636754008A80C6 /* FirstGame.h */,
+			);
+			name = game;
+			path = ../game;
+			sourceTree = "<group>";
+		};
+		CE574A6C1B64D06B008A80C6 /* render */ = {
+			isa = PBXGroup;
+			children = (
+				CE574A6D1B64D091008A80C6 /* kShader.cpp */,
+				CE574A6E1B64D091008A80C6 /* kShader.h */,
+				CE7849451B73366C009094F3 /* kVertexShader.h */,
+				CE7849481B733753009094F3 /* kFragmentShader.h */,
+				CE78494A1B7339BE009094F3 /* kProgram.cpp */,
+				CE78494B1B7339BE009094F3 /* kProgram.h */,
+				CE78494D1B735D64009094F3 /* kOpenGLCapability.cpp */,
+				CE78494E1B735D64009094F3 /* kOpenGLCapability.h */,
+				CE7849571B73A970009094F3 /* kRender.cpp */,
+				CE7849581B73A970009094F3 /* kRender.h */,
+			);
+			path = render;
+			sourceTree = "<group>";
+		};
 		CE7E5AB31B5B871000C534CA = {
 			isa = PBXGroup;
 			children = (
+				CE574A5B1B63673C008A80C6 /* game */,
+				CE2E16BD1B5D5F51004D1C16 /* shader */,
 				CE7E5AF01B5B8AE800C534CA /* OpenGLES.framework */,
 				CE7E5AE91B5B8A8200C534CA /* kEngine */,
 				CE7E5ABE1B5B871000C534CA /* kGameCpp */,
@@ -88,7 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				CE7E5AED1B5B8ABB00C534CA /* kGLKViewController.h */,
-				CE7E5AEE1B5B8ABB00C534CA /* kGLKViewController.m */,
+				CE7E5AEE1B5B8ABB00C534CA /* kGLKViewController.mm */,
 				CE7E5AC31B5B871000C534CA /* AppDelegate.h */,
 				CE7E5AC41B5B871000C534CA /* AppDelegate.m */,
 				CE7E5ACC1B5B871000C534CA /* Images.xcassets */,
@@ -127,11 +276,29 @@
 		CE7E5AE91B5B8A8200C534CA /* kEngine */ = {
 			isa = PBXGroup;
 			children = (
-				CE7E5AEA1B5B8A8200C534CA /* kGame.cpp */,
-				CE7E5AEB1B5B8A8200C534CA /* kGame.h */,
+				CE574A6C1B64D06B008A80C6 /* render */,
+				CE38ED241B615213007896BD /* debug */,
+				CE38ED1F1B614912007896BD /* math */,
+				CE38ED1B1B6146BE007896BD /* node */,
+				CE38ED171B61389B007896BD /* log */,
+				CE2E16B11B5D551C004D1C16 /* platform */,
+				CE2E16A91B5D436E004D1C16 /* io */,
+				CE7E5AF21B5B8C2000C534CA /* core */,
+				CE2E16AA1B5D4559004D1C16 /* kEngine.cpp */,
+				CE2E16AB1B5D4559004D1C16 /* kEngine.h */,
 			);
 			name = kEngine;
 			path = ../src/kEngine;
+			sourceTree = "<group>";
+		};
+		CE7E5AF21B5B8C2000C534CA /* core */ = {
+			isa = PBXGroup;
+			children = (
+				CE7E5AF31B5B8C5100C534CA /* kObject.cpp */,
+				CE7E5AF41B5B8C5100C534CA /* kObject.h */,
+				CE2E16AD1B5D4BDB004D1C16 /* kConfig.h */,
+			);
+			name = core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2E16BE1B5D5F51004D1C16 /* shader in Resources */,
 				CE7E5AD01B5B871000C534CA /* LaunchScreen.xib in Resources */,
 				CE7E5ACD1B5B871000C534CA /* Images.xcassets in Resources */,
 			);
@@ -233,10 +401,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE574A6F1B64D091008A80C6 /* kShader.cpp in Sources */,
+				CE7849591B73A970009094F3 /* kRender.cpp in Sources */,
+				CE78494C1B7339BE009094F3 /* kProgram.cpp in Sources */,
+				CE9D5B011B61D460001F8620 /* kMatrix4x4.cpp in Sources */,
 				CE7E5AC51B5B871000C534CA /* AppDelegate.m in Sources */,
 				CE7E5AC21B5B871000C534CA /* main.m in Sources */,
-				CE7E5AEC1B5B8A8200C534CA /* kGame.cpp in Sources */,
-				CE7E5AEF1B5B8ABB00C534CA /* kGLKViewController.m in Sources */,
+				CE2E16AC1B5D4559004D1C16 /* kEngine.cpp in Sources */,
+				CE574A5E1B636754008A80C6 /* FirstGame.cpp in Sources */,
+				CE38ED1E1B6146D0007896BD /* kNode.cpp in Sources */,
+				CE78494F1B735D64009094F3 /* kOpenGLCapability.cpp in Sources */,
+				CE38ED221B61492A007896BD /* kVec3.cpp in Sources */,
+				CE2E16B51B5D5570004D1C16 /* kFile.mm in Sources */,
+				CE7E5AEF1B5B8ABB00C534CA /* kGLKViewController.mm in Sources */,
+				CE7E5AF51B5B8C5100C534CA /* kObject.cpp in Sources */,
+				CE38ED1A1B613C28007896BD /* kLog.cpp in Sources */,
+				CE574A561B635973008A80C6 /* kMathUtil.cpp in Sources */,
+				CE574A591B6361CF008A80C6 /* kNodeBox.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,32 +536,38 @@
 		CE7E5AE01B5B871000C534CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/boost_1_58_0,
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../src/kEngine,
 				);
 				INFOPLIST_FILE = kGameCpp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = ../src/kEngine/;
 			};
 			name = Debug;
 		};
 		CE7E5AE11B5B871000C534CA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/boost_1_58_0,
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../src/kEngine,
 				);
 				INFOPLIST_FILE = kGameCpp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = ../src/kEngine/;
 			};
 			name = Release;
 		};

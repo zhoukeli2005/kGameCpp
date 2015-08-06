@@ -12,7 +12,10 @@
 
 @interface kGLKViewController : GLKViewController
 
+- (void)start;
+
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect;
+- (void)update;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event;
