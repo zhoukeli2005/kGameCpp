@@ -5,19 +5,24 @@
 k_namespace_begin
 render_namespace_begin
 
+boost::shared_ptr<kRender> get_render()
+{
+	return kengine::kEngine::instance().render();
+}
+
 void kRender::start()
 {
-	// 1. ViewPort
+	// Project Matrix
 	math::kSize sz = kengine::kEngine::instance().screenSize();
-	glViewport(100, 50, sz.w, sz.h);
-	GLenum err = glGetError();
-	log::info("glViewPort err:%d", err);
+	projectMatrix_ = math::kMatrix4x4::project(45, sz.w / sz.h, 1, 1000);
 	
-	float v[4];
-	glGetFloatv(GL_VIEWPORT, v);
-	log::info("glViewPort x:%f, y:%f, w:%f, h:%f", v[0], v[1], v[2], v[3]);
-	
-	// 2. Project Matrix
+	// Camera Manager
+	cameraManager_ = boost::make_shared<kCameraManager>();
+}
+
+void kRender::draw()
+{
+	cameraManager_->draw();
 }
 
 render_namespace_end

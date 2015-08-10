@@ -17,6 +17,8 @@
 		CE574A591B6361CF008A80C6 /* kNodeBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE574A581B6361CF008A80C6 /* kNodeBox.cpp */; };
 		CE574A5E1B636754008A80C6 /* FirstGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE574A5C1B636754008A80C6 /* FirstGame.cpp */; };
 		CE574A6F1B64D091008A80C6 /* kShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE574A6D1B64D091008A80C6 /* kShader.cpp */; };
+		CE5EF8041B78E4D600A2402D /* kCameraManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5EF8001B78E4D600A2402D /* kCameraManager.cpp */; };
+		CE5EF8081B78E4F700A2402D /* kCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5EF8061B78E4F700A2402D /* kCamera.cpp */; };
 		CE78494C1B7339BE009094F3 /* kProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE78494A1B7339BE009094F3 /* kProgram.cpp */; };
 		CE78494F1B735D64009094F3 /* kOpenGLCapability.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE78494D1B735D64009094F3 /* kOpenGLCapability.cpp */; };
 		CE7849591B73A970009094F3 /* kRender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE7849571B73A970009094F3 /* kRender.cpp */; };
@@ -63,6 +65,12 @@
 		CE574A5D1B636754008A80C6 /* FirstGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstGame.h; sourceTree = "<group>"; };
 		CE574A6D1B64D091008A80C6 /* kShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kShader.cpp; sourceTree = "<group>"; };
 		CE574A6E1B64D091008A80C6 /* kShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kShader.h; sourceTree = "<group>"; };
+		CE5EF8001B78E4D600A2402D /* kCameraManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kCameraManager.cpp; sourceTree = "<group>"; };
+		CE5EF8011B78E4D600A2402D /* kCameraManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kCameraManager.h; sourceTree = "<group>"; };
+		CE5EF8061B78E4F700A2402D /* kCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kCamera.cpp; sourceTree = "<group>"; };
+		CE5EF8071B78E4F700A2402D /* kCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kCamera.h; sourceTree = "<group>"; };
+		CE5EF8091B78E87200A2402D /* kMatrixStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kMatrixStack.h; sourceTree = "<group>"; };
+		CE5EF80A1B78F25D00A2402D /* kRect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kRect.h; sourceTree = "<group>"; };
 		CE7849451B73366C009094F3 /* kVertexShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kVertexShader.h; sourceTree = "<group>"; };
 		CE7849481B733753009094F3 /* kFragmentShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kFragmentShader.h; sourceTree = "<group>"; };
 		CE78494A1B7339BE009094F3 /* kProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kProgram.cpp; sourceTree = "<group>"; };
@@ -172,6 +180,8 @@
 				CE574A541B6357E3008A80C6 /* kMathUtil.h */,
 				CE574A551B635973008A80C6 /* kMathUtil.cpp */,
 				CE7849561B73A744009094F3 /* kSize.h */,
+				CE5EF8091B78E87200A2402D /* kMatrixStack.h */,
+				CE5EF80A1B78F25D00A2402D /* kRect.h */,
 			);
 			path = math;
 			sourceTree = "<group>";
@@ -197,6 +207,7 @@
 		CE574A6C1B64D06B008A80C6 /* render */ = {
 			isa = PBXGroup;
 			children = (
+				CE5EF7FF1B78E4D600A2402D /* camera */,
 				CE574A6D1B64D091008A80C6 /* kShader.cpp */,
 				CE574A6E1B64D091008A80C6 /* kShader.h */,
 				CE7849451B73366C009094F3 /* kVertexShader.h */,
@@ -209,6 +220,17 @@
 				CE7849581B73A970009094F3 /* kRender.h */,
 			);
 			path = render;
+			sourceTree = "<group>";
+		};
+		CE5EF7FF1B78E4D600A2402D /* camera */ = {
+			isa = PBXGroup;
+			children = (
+				CE5EF8001B78E4D600A2402D /* kCameraManager.cpp */,
+				CE5EF8011B78E4D600A2402D /* kCameraManager.h */,
+				CE5EF8061B78E4F700A2402D /* kCamera.cpp */,
+				CE5EF8071B78E4F700A2402D /* kCamera.h */,
+			);
+			path = camera;
 			sourceTree = "<group>";
 		};
 		CE7E5AB31B5B871000C534CA = {
@@ -402,9 +424,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE574A6F1B64D091008A80C6 /* kShader.cpp in Sources */,
+				CE5EF8081B78E4F700A2402D /* kCamera.cpp in Sources */,
 				CE7849591B73A970009094F3 /* kRender.cpp in Sources */,
 				CE78494C1B7339BE009094F3 /* kProgram.cpp in Sources */,
 				CE9D5B011B61D460001F8620 /* kMatrix4x4.cpp in Sources */,
+				CE5EF8041B78E4D600A2402D /* kCameraManager.cpp in Sources */,
 				CE7E5AC51B5B871000C534CA /* AppDelegate.m in Sources */,
 				CE7E5AC21B5B871000C534CA /* main.m in Sources */,
 				CE2E16AC1B5D4559004D1C16 /* kEngine.cpp in Sources */,

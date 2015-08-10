@@ -11,13 +11,13 @@ math_namespace_begin
 #define degreeToRadian(f) ((f) * PI / 180.0)
 #define radianToDegree(f) ((f) * 180.0 / PI)
 
-float sin(float f);
+float sin(float radian);
 
-float cos(float f);
+float cos(float radian);
 
-float tan(float f);
+float tan(float radian);
 
-float ctan(float f);
+float ctan(float radian);
 
 math_namespace_end
 k_namespace_end

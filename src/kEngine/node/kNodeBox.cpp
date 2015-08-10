@@ -79,25 +79,24 @@ void kNodeBox::resize(int size)
 	indexes_[idx++] = 2;
 }
 
-void kNodeBox::draw()
+void kNodeBox::draw(const math::kMatrix4x4 & mvpMatrix)
 {
 	if(!program_) {
 		program_ = boost::make_shared<render::kProgram>();
 		program_->attach("shader/simple.vs", "shader/simple.fs");
 		program_->bind_attrib(0, "a_position");
 		program_->link();
+		program_->bind_uniform(0, "u_mvp");
 	}
-	{
-		points_[0] = { -1, -0.5, 0 };
-		points_[1] = { 0.5, -0.5, 0 };
-		points_[2] = { 0.5, 0.5, 0 };
-	}
+	
 	program_->use();
 	
+	glUniformMatrix4fv(0, 1, 0, mvpMatrix.m);
+		
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, points_);
 	
-	glDrawArrays(GL_TRIANGLES, 0, 3);
+	glDrawElements(GL_TRIANGLES, sizeof(indexes_) / sizeof(indexes_[0]), GL_UNSIGNED_SHORT, indexes_);
 }
 
 node_namespace_end

@@ -20,9 +20,24 @@ namespace game {
 	public:
 		void start()
 		{
-			boost::shared_ptr<kengine::node::kNode> box = boost::make_shared<kengine::node::kNodeBox>(10);
-			kengine::kEngine::instance().rootNode()->addChild(box);
+			box_ = boost::make_shared<kengine::node::kNodeBox>(10);
+			box_->moveZ(-20);
+
+			camera_ = boost::make_shared<kengine::render::kCamera>();
+			camera_->moveTo(kengine::math::kVec3(0, 0, 0));
+			
+			camera_->enable();
+			kengine::kEngine::instance().rootNode()->addChild(box_);
 		}
+		
+		void update(float deltaTime)
+		{
+			box_->rotateYBy(degreeToRadian(1));
+		}
+		
+	private:
+		boost::shared_ptr<kengine::render::kCamera> camera_;
+		boost::shared_ptr<kengine::node::kNodeBox> box_;
 	};
 }
 

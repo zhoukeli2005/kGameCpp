@@ -9,6 +9,8 @@
 #include <boost/enable_shared_from_this.hpp>
 #include <boost/shared_ptr.hpp>
 
+#include <vector>
+
 k_namespace_begin
 render_namespace_begin
 
@@ -34,6 +36,8 @@ public:
 	// Vertex Attribs
 	void bind_attrib(GLint index, const std::string & name);
 	
+	void bind_uniform(GLint index, const std::string & name);
+	
 	// Link
 	bool link();
 		
@@ -45,6 +49,8 @@ private:
 	
 	boost::shared_ptr<kVertexShader> vertex_;
 	boost::shared_ptr<kFragmentShader> fragment_;
+	
+	std::vector<GLint> uniform_names_;
 };
 
 render_namespace_end

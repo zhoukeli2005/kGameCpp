@@ -3,6 +3,8 @@
 
 #include "core/kConfig.h"
 #include "math/kVec3.h"
+#include "math/kMatrix4x4.h"
+#include "math/kMatrixStack.h"
 
 #include <boost/noncopyable.hpp>
 #include <boost/shared_ptr.hpp>
@@ -33,61 +35,69 @@ public:
 	boost::shared_ptr<kNode> parent() { return parent_.lock(); }
 	
 public:
-	void scale(float x, float y, float z);
-	void scaleX(float x);
-	void scaleY(float y);
-	void scaleZ(float z);
+	void scale(float x, float y, float z) { scale_.x = x; scale_.y = y; scale_.z = z; transformDirty_ = true; }
+	void scaleX(float x) { scale_.x = x; transformDirty_ = true; }
+	void scaleY(float y) { scale_.y = y; transformDirty_ = true; }
+	void scaleZ(float z) { scale_.z = z; transformDirty_ = true; }
 	
-	void scaleBy(float x, float y, float z);
-	void scaleXBy(float x);
-	void scaleYBy(float y);
-	void scaleZBy(float z);
+	void scaleBy(float x, float y, float z) { scale_.x += x; scale_.y += y; scale_.z += z; transformDirty_ = true; }
+	void scaleXBy(float x) { scale_.x += x; transformDirty_ = true; }
+	void scaleYBy(float y) { scale_.y += y; transformDirty_ = true; }
+	void scaleZBy(float z) { scale_.z += z; transformDirty_ = true; }
 	
-	math::kVec3 scale();
-	float scaleX();
-	float scaleY();
-	float scaleZ();
-	
-public:
-	void rotate(float x, float y, float z);
-	void rotateX(float x);
-	void rotateY(float y);
-	void rotateZ(float z);
-	
-	void rotateBy(float x, float y, float z);
-	void rotateXBy(float x);
-	void rotateYBy(float y);
-	void rotateZBy(float z);
-	
-	math::kVec3 rotate();
-	float rotateX();
-	float rotateY();
-	float rotateZ();
+	const math::kVec3 & scale() { return scale_; }
+	float scaleX() { return scale_.x; }
+	float scaleY() { return scale_.y; }
+	float scaleZ() { return scale_.z; }
 	
 public:
-	void move(float x, float y, float z);
-	void moveX(float x);
-	void moveY(float y);
-	void moveZ(float z);
+	void rotate(float x, float y, float z) { rotation_.x = x; rotation_.y = y; rotation_.z = z; transformDirty_ = true; }
+	void rotateX(float x) { rotation_.x = x; transformDirty_ = true; }
+	void rotateY(float y) { rotation_.y = y; transformDirty_ = true; }
+	void rotateZ(float z) { rotation_.z = z; transformDirty_ = true; }
 	
-	void moveBy(float x, float y, float z);
-	void moveXBy(float x);
-	void moveYBy(float y);
-	void moveZBy(float z);
+	void rotateBy(float x, float y, float z) { rotation_.x += x; rotation_.y += y; rotation_.z += z; transformDirty_ = true; }
+	void rotateXBy(float x) { rotation_.x += x; transformDirty_ = true; }
+	void rotateYBy(float y) { rotation_.y += y; transformDirty_ = true; }
+	void rotateZBy(float z) { rotation_.z += z; transformDirty_ = true; }
 	
-	math::kVec3 position();
-	float positionX();
-	float positionY();
-	float positionZ();
+	const math::kVec3 & rotate() { return rotation_; }
+	float rotateX() { return rotation_.x; }
+	float rotateY() { return rotation_.y; }
+	float rotateZ() { return rotation_.z; }
 	
 public:
-	virtual void visit();
+	void move(float x, float y, float z) { position_.x = x; position_.y = y; position_.z = z; transformDirty_ = true; }
+	void moveX(float x) { position_.x = x; transformDirty_ = true; }
+	void moveY(float y) { position_.y = y; transformDirty_ = true; }
+	void moveZ(float z) { position_.z = z; transformDirty_ = true; }
 	
-	virtual void draw() {}
+	void moveBy(float x, float y, float z) { position_.x += x; position_.y += y; position_.z += z; transformDirty_ = true; }
+	void moveXBy(float x) { position_.x += x; transformDirty_ = true; }
+	void moveYBy(float y) { position_.y += y; transformDirty_ = true; }
+	void moveZBy(float z) { position_.z += z; transformDirty_ = true; }
 	
+	const math::kVec3 & position() { return position_; }
+	float positionX() { return position_.x; }
+	float positionY() { return position_.y; }
+	float positionZ() { return position_.z; }
+	
+public:
+	virtual void transform_and_draw(math::kMatrixStack & matrixStack);
+	
+public:
+	virtual void draw(const math::kMatrix4x4 & mvpMatrix) {}
+	
+protected:
+	void _transform();
+	
+	math::kMatrix4x4 localTransform_;
+
 // members
 private:
 	// tranformation
+	bool transformDirty_;
+	
 	math::kVec3 position_;
 	math::kVec3 scale_;
 	math::kVec3 rotation_;

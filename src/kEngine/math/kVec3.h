@@ -115,7 +115,7 @@ struct kVec3
 		
 		this->x = y_ * o.z - z_ * o.y;
 		this->y = z_ * o.x - x_ * o.z;
-		this->z = x_ * o.y - y_ * o.z;
+		this->z = x_ * o.y - y_ * o.x;
 		return *this;
 	}
 };

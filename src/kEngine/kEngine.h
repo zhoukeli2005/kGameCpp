@@ -33,6 +33,7 @@ public:
 	
 // x. node
 public:
+	boost::shared_ptr<render::kRender> render() { return render_; }
 	boost::shared_ptr<node::kNode> rootNode() { return rootNode_; }
 	
 // x. touches

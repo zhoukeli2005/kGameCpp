@@ -30,8 +30,7 @@ void kEngine::update(float timeDelta)
 
 void kEngine::draw()
 {
-	glClear(GL_COLOR | GL_DEPTH);
-	rootNode_->visit();
+	render_->draw();
 }
 
 void kEngine::touchesBegan()

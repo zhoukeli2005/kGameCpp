@@ -62,6 +62,14 @@ void kProgram::bind_attrib(GLint index, const std::string &name)
 	glBindAttribLocation(program_, index, name.data());
 }
 
+void kProgram::bind_uniform(GLint index, const std::string &name)
+{
+	if(index >= uniform_names_.size()) {
+		uniform_names_.resize(index + 1);
+	}
+	uniform_names_[index] = glGetUniformLocation(program_, name.c_str());
+}
+
 bool kProgram::link()
 {
 	if(!vertex_ || !fragment_) {

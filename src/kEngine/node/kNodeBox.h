@@ -21,7 +21,7 @@ public:
 	void resize(int size);
 	
 public:
-	void draw();
+	void draw(const math::kMatrix4x4 &);
 	
 private:
 	math::kVec3 points_[8];

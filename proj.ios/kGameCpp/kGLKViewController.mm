@@ -12,13 +12,14 @@
 
 @implementation kGLKViewController
 
+static game::FirstGame s_game;
+
 - (void)start
 {
 	CGRect sz = [[UIScreen mainScreen] bounds];
-	kengine::kEngine::instance().start(sz.size.width, sz.size.height);
-	
-	static game::FirstGame game;
-	game.start();
+	CGFloat scale = [[UIScreen mainScreen] scale];
+	kengine::kEngine::instance().start(sz.size.width * scale, sz.size.height * scale);
+	s_game.start();
 }
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
@@ -33,7 +34,10 @@
 {
 	[self.view setNeedsDisplay];
 	
-	kengine::kEngine::instance().update([self timeSinceLastUpdate]);
+	NSTimeInterval deltaTime = [self timeSinceFirstResume];
+	
+	kengine::kEngine::instance().update(deltaTime);
+	s_game.update(deltaTime);
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
