@@ -30,7 +30,7 @@ bool kShader::compile()
 	}
 	
 	boost::shared_ptr<io::kFile> file = boost::make_shared<io::kFile>(filename_);
-	
+
 	if(!file->exist()) {
 		return false;
 	}

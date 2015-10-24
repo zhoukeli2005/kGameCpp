@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE2E16AC1B5D4559004D1C16 /* kEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2E16AA1B5D4559004D1C16 /* kEngine.cpp */; };
-		CE2E16B51B5D5570004D1C16 /* kFile.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE2E16B41B5D5570004D1C16 /* kFile.mm */; };
+		CE2E16B51B5D5570004D1C16 /* kFile.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE2E16B41B5D5570004D1C16 /* kFile.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CE2E16BE1B5D5F51004D1C16 /* shader in Resources */ = {isa = PBXBuildFile; fileRef = CE2E16BD1B5D5F51004D1C16 /* shader */; };
 		CE38ED1A1B613C28007896BD /* kLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE38ED191B613C28007896BD /* kLog.cpp */; };
 		CE38ED1E1B6146D0007896BD /* kNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE38ED1C1B6146D0007896BD /* kNode.cpp */; };
@@ -19,13 +19,15 @@
 		CE574A6F1B64D091008A80C6 /* kShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE574A6D1B64D091008A80C6 /* kShader.cpp */; };
 		CE5EF8041B78E4D600A2402D /* kCameraManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5EF8001B78E4D600A2402D /* kCameraManager.cpp */; };
 		CE5EF8081B78E4F700A2402D /* kCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5EF8061B78E4F700A2402D /* kCamera.cpp */; };
+		CE5EF8131B7A598400A2402D /* kTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5EF8111B7A598400A2402D /* kTexture.cpp */; };
+		CE5EF8151B7A5A0F00A2402D /* res in Resources */ = {isa = PBXBuildFile; fileRef = CE5EF8141B7A5A0F00A2402D /* res */; };
+		CE5EF8161B7A5A5500A2402D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE7E5ACE1B5B871000C534CA /* LaunchScreen.xib */; };
 		CE78494C1B7339BE009094F3 /* kProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE78494A1B7339BE009094F3 /* kProgram.cpp */; };
 		CE78494F1B735D64009094F3 /* kOpenGLCapability.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE78494D1B735D64009094F3 /* kOpenGLCapability.cpp */; };
 		CE7849591B73A970009094F3 /* kRender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE7849571B73A970009094F3 /* kRender.cpp */; };
 		CE7E5AC21B5B871000C534CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7E5AC11B5B871000C534CA /* main.m */; };
 		CE7E5AC51B5B871000C534CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7E5AC41B5B871000C534CA /* AppDelegate.m */; };
 		CE7E5ACD1B5B871000C534CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7E5ACC1B5B871000C534CA /* Images.xcassets */; };
-		CE7E5AD01B5B871000C534CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE7E5ACE1B5B871000C534CA /* LaunchScreen.xib */; };
 		CE7E5ADC1B5B871000C534CA /* kGameCppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7E5ADB1B5B871000C534CA /* kGameCppTests.m */; };
 		CE7E5AEF1B5B8ABB00C534CA /* kGLKViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE7E5AEE1B5B8ABB00C534CA /* kGLKViewController.mm */; };
 		CE7E5AF11B5B8AE800C534CA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7E5AF01B5B8AE800C534CA /* OpenGLES.framework */; };
@@ -71,6 +73,10 @@
 		CE5EF8071B78E4F700A2402D /* kCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kCamera.h; sourceTree = "<group>"; };
 		CE5EF8091B78E87200A2402D /* kMatrixStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kMatrixStack.h; sourceTree = "<group>"; };
 		CE5EF80A1B78F25D00A2402D /* kRect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kRect.h; sourceTree = "<group>"; };
+		CE5EF8111B7A598400A2402D /* kTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kTexture.cpp; sourceTree = "<group>"; };
+		CE5EF8121B7A598400A2402D /* kTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kTexture.h; sourceTree = "<group>"; };
+		CE5EF8141B7A5A0F00A2402D /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
+		CE7840BB1BDB527C00067651 /* kUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kUtil.h; sourceTree = "<group>"; };
 		CE7849451B73366C009094F3 /* kVertexShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kVertexShader.h; sourceTree = "<group>"; };
 		CE7849481B733753009094F3 /* kFragmentShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kFragmentShader.h; sourceTree = "<group>"; };
 		CE78494A1B7339BE009094F3 /* kProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kProgram.cpp; sourceTree = "<group>"; };
@@ -197,6 +203,7 @@
 		CE574A5B1B63673C008A80C6 /* game */ = {
 			isa = PBXGroup;
 			children = (
+				CE5EF8141B7A5A0F00A2402D /* res */,
 				CE574A5C1B636754008A80C6 /* FirstGame.cpp */,
 				CE574A5D1B636754008A80C6 /* FirstGame.h */,
 			);
@@ -218,6 +225,8 @@
 				CE78494E1B735D64009094F3 /* kOpenGLCapability.h */,
 				CE7849571B73A970009094F3 /* kRender.cpp */,
 				CE7849581B73A970009094F3 /* kRender.h */,
+				CE5EF8111B7A598400A2402D /* kTexture.cpp */,
+				CE5EF8121B7A598400A2402D /* kTexture.h */,
 			);
 			path = render;
 			sourceTree = "<group>";
@@ -231,6 +240,21 @@
 				CE5EF8071B78E4F700A2402D /* kCamera.h */,
 			);
 			path = camera;
+			sourceTree = "<group>";
+		};
+		CE5EF81D1B7B5F5400A2402D /* 3rdparty */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 3rdparty;
+			sourceTree = "<group>";
+		};
+		CE7840BA1BDB526000067651 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				CE7840BB1BDB527C00067651 /* kUtil.h */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 		CE7E5AB31B5B871000C534CA = {
@@ -298,6 +322,8 @@
 		CE7E5AE91B5B8A8200C534CA /* kEngine */ = {
 			isa = PBXGroup;
 			children = (
+				CE7840BA1BDB526000067651 /* util */,
+				CE5EF81D1B7B5F5400A2402D /* 3rdparty */,
 				CE574A6C1B64D06B008A80C6 /* render */,
 				CE38ED241B615213007896BD /* debug */,
 				CE38ED1F1B614912007896BD /* math */,
@@ -403,8 +429,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5EF8161B7A5A5500A2402D /* LaunchScreen.xib in Resources */,
 				CE2E16BE1B5D5F51004D1C16 /* shader in Resources */,
-				CE7E5AD01B5B871000C534CA /* LaunchScreen.xib in Resources */,
+				CE5EF8151B7A5A0F00A2402D /* res in Resources */,
 				CE7E5ACD1B5B871000C534CA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +455,7 @@
 				CE7849591B73A970009094F3 /* kRender.cpp in Sources */,
 				CE78494C1B7339BE009094F3 /* kProgram.cpp in Sources */,
 				CE9D5B011B61D460001F8620 /* kMatrix4x4.cpp in Sources */,
+				CE5EF8131B7A598400A2402D /* kTexture.cpp in Sources */,
 				CE5EF8041B78E4D600A2402D /* kCameraManager.cpp in Sources */,
 				CE7E5AC51B5B871000C534CA /* AppDelegate.m in Sources */,
 				CE7E5AC21B5B871000C534CA /* main.m in Sources */,
@@ -562,7 +590,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/boost_1_58_0,
@@ -581,7 +609,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/boost_1_58_0,

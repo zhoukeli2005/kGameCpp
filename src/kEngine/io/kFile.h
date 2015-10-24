@@ -21,14 +21,24 @@ public:
 	
 // api
 public:
-	bool exist();
+	bool exist() { return exist_; }
+	
+	const std::string & filename() { return filename_; }
+	const std::string & fullname() { return fullname_; }
 	
 	std::string read(size_t count);
 	std::string read();
 	
+	size_t size();
+	const char * data();
+	
 // members
 private:
 	std::string filename_;
+	std::string fullname_;
+	bool exist_;
+	
+	void * platform_;
 };
 
 io_namespace_end

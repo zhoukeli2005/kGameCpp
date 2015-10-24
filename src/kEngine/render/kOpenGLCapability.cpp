@@ -12,6 +12,9 @@ kOpenGLCapability::kOpenGLCapability()
 	log::info("OpenGL Capacity :\n"
 			  "maxVertexAttribs:%d\n"
 			  , maxVertexAttribs);
+	
+	// enable
+	glEnable(GL_DEPTH_TEST);
 }
 
 render_namespace_end

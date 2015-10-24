@@ -48,7 +48,7 @@ void kProgram::attach(const std::string &vsfilename, const std::string &fsfilena
 	if(!vertex->compile()) {
 		return;
 	}
-	
+
 	boost::shared_ptr<kFragmentShader> fragment = boost::make_shared<kFragmentShader>(fsfilename);
 	if(!fragment->compile()) {
 		return;
@@ -68,6 +68,11 @@ void kProgram::bind_uniform(GLint index, const std::string &name)
 		uniform_names_.resize(index + 1);
 	}
 	uniform_names_[index] = glGetUniformLocation(program_, name.c_str());
+}
+
+GLint kProgram::get_uniform_pos(GLint index)
+{
+	return uniform_names_[index];
 }
 
 bool kProgram::link()

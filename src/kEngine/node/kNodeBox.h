@@ -4,6 +4,7 @@
 #include "kNode.h"
 #include "math/kVec3.h"
 #include "render/kProgram.h"
+#include "render/kTexture.h"
 
 
 k_namespace_begin
@@ -26,8 +27,13 @@ public:
 private:
 	math::kVec3 points_[8];
 	unsigned short int indexes_[36];
+	struct UV {
+		float u;
+		float v;
+	} uv_[36];
 
 	boost::shared_ptr<render::kProgram> program_;
+	boost::shared_ptr<render::kTexture> texture_;
 };
 
 node_namespace_end

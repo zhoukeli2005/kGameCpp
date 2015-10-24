@@ -38,6 +38,8 @@ public:
 	
 	void bind_uniform(GLint index, const std::string & name);
 	
+	GLint get_uniform_pos(GLint index);
+	
 	// Link
 	bool link();
 		
