@@ -24,102 +24,75 @@ void kNodeBox::resize(int size)
 	points_[6] = { half_size, half_size, -half_size };
 	points_[7] = { -half_size, half_size, -half_size };
 	
+	uv_[0] = {0, 1};
+	uv_[1] = {1, 1};
+	uv_[2] = {1, 0};
+	uv_[3] = {0, 0};
+	uv_[4] = {0, 0};
+	uv_[5] = {1, 0};
+	uv_[6] = {1, 1};
+	uv_[7] = {0, 1};
+	
 	// front
-	int idx = 0, uv_idx = 0;
+	int idx = 0;
 	indexes_[idx++] = 0;
 	indexes_[idx++] = 1;
 	indexes_[idx++] = 3;
-	uv_[uv_idx++] = {0, 0};
-	uv_[uv_idx++] = {1, 0};
-	uv_[uv_idx++] = {0, 1};
 	
 	indexes_[idx++] = 1;
 	indexes_[idx++] = 2;
 	indexes_[idx++] = 3;
-	uv_[uv_idx++] = {0, 0};
-	uv_[uv_idx++] = {1, 0};
-	uv_[uv_idx++] = {0, 1};
 	
 	// back
 	indexes_[idx++] = 5;
 	indexes_[idx++] = 4;
 	indexes_[idx++] = 6;
-	uv_[uv_idx++] = {0, 0};
-	uv_[uv_idx++] = {1, 0};
-	uv_[uv_idx++] = {0, 1};
 	
 	indexes_[idx++] = 4;
 	indexes_[idx++] = 7;
 	indexes_[idx++] = 6;
-	uv_[uv_idx++] = {0, 0};
-	uv_[uv_idx++] = {1, 0};
-	uv_[uv_idx++] = {0, 1};
 	
 	// top
 	indexes_[idx++] = 3;
 	indexes_[idx++] = 2;
 	indexes_[idx++] = 7;
-	uv_[uv_idx++] = {0, 0};
-	uv_[uv_idx++] = {1, 0};
-	uv_[uv_idx++] = {0, 1};
 	
 	indexes_[idx++] = 2;
 	indexes_[idx++] = 6;
 	indexes_[idx++] = 7;
-	uv_[uv_idx++] = {0, 0};
-	uv_[uv_idx++] = {1, 0};
-	uv_[uv_idx++] = {0, 1};
 	
 	// bottom
 	indexes_[idx++] = 0;
 	indexes_[idx++] = 4;
 	indexes_[idx++] = 1;
-	uv_[uv_idx++] = {0, 0};
-	uv_[uv_idx++] = {1, 0};
-	uv_[uv_idx++] = {0, 1};
 	
 	indexes_[idx++] = 1;
 	indexes_[idx++] = 4;
 	indexes_[idx++] = 5;
-	uv_[uv_idx++] = {0, 0};
-	uv_[uv_idx++] = {1, 0};
-	uv_[uv_idx++] = {0, 1};
 	
 	// left
 	indexes_[idx++] = 0;
 	indexes_[idx++] = 3;
 	indexes_[idx++] = 4;
-	uv_[uv_idx++] = {0, 0};
-	uv_[uv_idx++] = {1, 0};
-	uv_[uv_idx++] = {0, 1};
 	
 	indexes_[idx++] = 3;
 	indexes_[idx++] = 7;
 	indexes_[idx++] = 4;
-	uv_[uv_idx++] = {0, 0};
-	uv_[uv_idx++] = {1, 0};
-	uv_[uv_idx++] = {0, 1};
 	
 	// right
 	indexes_[idx++] = 1;
 	indexes_[idx++] = 5;
 	indexes_[idx++] = 2;
-	uv_[uv_idx++] = {0, 0};
-	uv_[uv_idx++] = {1, 0};
-	uv_[uv_idx++] = {0, 1};
 	
 	indexes_[idx++] = 5;
 	indexes_[idx++] = 6;
 	indexes_[idx++] = 2;
-	uv_[uv_idx++] = {0, 0};
-	uv_[uv_idx++] = {1, 0};
-	uv_[uv_idx++] = {0, 1};
 }
 
 void kNodeBox::draw(const math::kMatrix4x4 & mvpMatrix)
 {
 	if(!texture_) {
-		texture_ = boost::make_shared<render::kTexture>();
+		texture_ = boost::make_shared<render::kTexture>("res/test.jpg");
 	}
 	
 	if(!program_) {
@@ -135,6 +108,20 @@ void kNodeBox::draw(const math::kMatrix4x4 & mvpMatrix)
 	}
 	program_->use();
 
+	if(1)
+	{
+		points_[0] = {-1, -1, -1};
+		points_[1] = {1, -1, 1};
+		points_[2] = {1, 1, 1};
+		points_[3] = {-1, -1, -1};
+		points_[4] = {1, 1, 1};
+		points_[5] = {-1, 1, -1};
+		glEnableVertexAttribArray(0);
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, points_);
+		glDrawArrays(GL_TRIANGLES, 0, 6);
+		return;
+	}
+	
 	glActiveTexture(GL_TEXTURE0);
 	glBindTexture(GL_TEXTURE_2D, texture_->glName());
 	

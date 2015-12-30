@@ -9,8 +9,19 @@
 
 k_namespace_begin
 
+#define SIZE 1000000
+static void * parray[SIZE];
+
 void kEngine::start(int w, int h)
 {
+	for(int i = 0; i < SIZE; ++i) {
+		parray[i] = malloc(256);
+		memset(parray[i], 0, 256);
+	}
+	for(int i = 0; i < SIZE - 100; ++i) {
+		free(parray[i]);
+	}
+	/*
 	rootNode_ = boost::make_shared<node::kNode>();
 	
 	render::kOpenGLCapability openglCapability;
@@ -20,7 +31,7 @@ void kEngine::start(int w, int h)
 	
 	render_ = boost::make_shared<render::kRender>();
 	render_->start();
-	
+	*/
 	return;
 }
 
@@ -30,7 +41,7 @@ void kEngine::update(float timeDelta)
 
 void kEngine::draw()
 {
-	render_->draw();
+	//render_->draw();
 }
 
 void kEngine::touchesBegan()

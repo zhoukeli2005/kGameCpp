@@ -20,11 +20,14 @@ namespace game {
 	public:
 		void start()
 		{
+			return;
+			
 			box_ = boost::make_shared<kengine::node::kNodeBox>(10);
-			box_->moveZ(-20);
+			box_->moveZ(-5);
 
 			camera_ = boost::make_shared<kengine::render::kCamera>();
 			camera_->moveTo(kengine::math::kVec3(0, 0, 0));
+			camera_->lookAt(kengine::math::kVec3(0, 0, -20));
 			
 			camera_->enable();
 			kengine::kEngine::instance().rootNode()->addChild(box_);
@@ -32,7 +35,7 @@ namespace game {
 		
 		void update(float deltaTime)
 		{
-			box_->rotateYBy(degreeToRadian(1));
+		//	box_->rotateYBy(degreeToRadian(1));
 		}
 		
 	private:

@@ -23,10 +23,7 @@ static game::FirstGame s_game;
 }
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
-{
-	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
-	glClear(GL_COLOR_BUFFER_BIT);
-	
+{	
 	kengine::kEngine::instance().draw();
 }
 

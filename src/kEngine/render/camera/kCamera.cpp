@@ -79,8 +79,13 @@ void kCamera::draw()
 	}
 	
 	glViewport(viewPort_.x, viewPort_.y, viewPort_.w, viewPort_.h);
-	glClear(GL_COLOR | GL_DEPTH);
+
+	glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
 	
+	glClearDepthf(1.0f);
+	
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
 	kEngine::instance().rootNode()->transform_and_draw(matrixStack_);
 }
 

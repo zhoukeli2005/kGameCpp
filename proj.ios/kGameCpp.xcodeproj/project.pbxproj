@@ -22,6 +22,7 @@
 		CE5EF8131B7A598400A2402D /* kTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5EF8111B7A598400A2402D /* kTexture.cpp */; };
 		CE5EF8151B7A5A0F00A2402D /* res in Resources */ = {isa = PBXBuildFile; fileRef = CE5EF8141B7A5A0F00A2402D /* res */; };
 		CE5EF8161B7A5A5500A2402D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE7E5ACE1B5B871000C534CA /* LaunchScreen.xib */; };
+		CE7840BE1BDBD00B00067651 /* kTexture.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE7840BD1BDBD00B00067651 /* kTexture.mm */; settings = {ASSET_TAGS = (); }; };
 		CE78494C1B7339BE009094F3 /* kProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE78494A1B7339BE009094F3 /* kProgram.cpp */; };
 		CE78494F1B735D64009094F3 /* kOpenGLCapability.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE78494D1B735D64009094F3 /* kOpenGLCapability.cpp */; };
 		CE7849591B73A970009094F3 /* kRender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE7849571B73A970009094F3 /* kRender.cpp */; };
@@ -77,6 +78,7 @@
 		CE5EF8121B7A598400A2402D /* kTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kTexture.h; sourceTree = "<group>"; };
 		CE5EF8141B7A5A0F00A2402D /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		CE7840BB1BDB527C00067651 /* kUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kUtil.h; sourceTree = "<group>"; };
+		CE7840BD1BDBD00B00067651 /* kTexture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = kTexture.mm; path = platform/ios/kTexture.mm; sourceTree = "<group>"; };
 		CE7849451B73366C009094F3 /* kVertexShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kVertexShader.h; sourceTree = "<group>"; };
 		CE7849481B733753009094F3 /* kFragmentShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kFragmentShader.h; sourceTree = "<group>"; };
 		CE78494A1B7339BE009094F3 /* kProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kProgram.cpp; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		CE2E16B21B5D5528004D1C16 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				CE7840BC1BDBCFCF00067651 /* render */,
 				CE2E16B31B5D5531004D1C16 /* io */,
 			);
 			name = ios;
@@ -255,6 +258,14 @@
 				CE7840BB1BDB527C00067651 /* kUtil.h */,
 			);
 			path = util;
+			sourceTree = "<group>";
+		};
+		CE7840BC1BDBCFCF00067651 /* render */ = {
+			isa = PBXGroup;
+			children = (
+				CE7840BD1BDBD00B00067651 /* kTexture.mm */,
+			);
+			name = render;
 			sourceTree = "<group>";
 		};
 		CE7E5AB31B5B871000C534CA = {
@@ -450,6 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7840BE1BDBD00B00067651 /* kTexture.mm in Sources */,
 				CE574A6F1B64D091008A80C6 /* kShader.cpp in Sources */,
 				CE5EF8081B78E4F700A2402D /* kCamera.cpp in Sources */,
 				CE7849591B73A970009094F3 /* kRender.cpp in Sources */,

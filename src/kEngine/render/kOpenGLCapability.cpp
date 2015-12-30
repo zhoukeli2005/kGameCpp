@@ -15,6 +15,9 @@ kOpenGLCapability::kOpenGLCapability()
 	
 	// enable
 	glEnable(GL_DEPTH_TEST);
+	glDepthFunc(GL_LEQUAL);
+	
+	glEnable(GL_STENCIL_TEST);
 }
 
 render_namespace_end

@@ -83,7 +83,7 @@ struct kMatrix4x4
 		return m[idx];
 	}
 	
-	// aip
+	// api
 	float & get(int row, int line)
 	{
 		return m[row + line * 4];
@@ -138,10 +138,10 @@ struct kMatrix4x4
 		float sinX = math::sin(radian);
 		float cosX = math::cos(radian);
 		
-		tmp.get(0, 0) = sinX;
-		tmp.get(0, 2) = cosX;
-		tmp.get(2, 0) = cosX;
-		tmp.get(2, 2) = -sinX;
+		tmp.get(0, 0) = cosX;
+		tmp.get(0, 2) = sinX;
+		tmp.get(2, 0) = -sinX;
+		tmp.get(2, 2) = cosX;
 		
 		return tmp;
 	}
@@ -198,7 +198,7 @@ struct kMatrix4x4
 		
 		kMatrix4x4 t = kMatrix4x4::translate(-eye.x, -eye.y, -eye.z);
 		
-		tmp = t * tmp;
+		tmp = tmp * t;
 		
 		return  tmp;
 	}
